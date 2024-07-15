@@ -9,6 +9,7 @@
         <properties>
         
             <!-- Configuration de la datasource -->
+            <!-- Créer une base de données requetejpa et ajouter ici le nom d'utilisateur et et le mot de passe -->
             <property name="jakarta.persistence.jdbc.url"
                       value="jdbc:mariadb://CHANGE_ME:CHANGE_ME/requetejpa"/>
             <property name="jakarta.persistence.jdbc.user"
