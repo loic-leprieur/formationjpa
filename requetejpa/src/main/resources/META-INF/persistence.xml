@@ -10,11 +10,11 @@
         
             <!-- Configuration de la datasource -->
             <property name="jakarta.persistence.jdbc.url"
-                      value="jdbc:mariadb://planetnine:33065/requetejpa"/>
+                      value="jdbc:mariadb://CHANGE_ME:CHANGE_ME/requetejpa"/>
             <property name="jakarta.persistence.jdbc.user"
-                      value="alara_dev"/>
+                      value="CHANGE_ME"/>
             <property name="jakarta.persistence.jdbc.password"
-                      value="Boo6evu_"/>
+                      value="CHANGE_ME"/>
             <property name="jakarta.persistence.jdbc.driver"
                       value="org.mariadb.jdbc.Driver"/>
             
