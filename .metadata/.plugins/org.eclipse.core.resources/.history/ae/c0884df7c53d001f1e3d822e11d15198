@@ -1,7 +1,0 @@
-package fr.dawan.jpa.entities.heritage;
-
-import java.io.Serializable;
-
-public class CompteEpargne extends CompteBancaire implements Serializable {
-
-}

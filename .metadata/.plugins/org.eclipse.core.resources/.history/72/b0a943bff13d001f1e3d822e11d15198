@@ -1,5 +1,0 @@
-package fr.dawan.jpa.dao;
-
-public class CompteBancaireDao extends AbstractDao<T> {
-
-}

@@ -1,5 +1,0 @@
-package fr.dawan.jpa.listeners;
-
-public class AuditListener {
-
-}

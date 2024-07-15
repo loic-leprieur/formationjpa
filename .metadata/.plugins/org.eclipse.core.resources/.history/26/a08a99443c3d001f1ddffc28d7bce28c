@@ -1,7 +1,0 @@
-package fr.dawan.exercice_jpa.entities;
-
-import java.io.Serializable;
-
-public class Commande implements Serializable {
-
-}

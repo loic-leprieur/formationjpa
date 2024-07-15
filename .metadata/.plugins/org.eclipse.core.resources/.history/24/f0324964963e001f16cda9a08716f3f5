@@ -1,7 +1,0 @@
-package fr.dawan.exercice_jpa.entities;
-
-@Entity
-@Table(name = "commande_pizza")
-public class CommandePizzaPK {
-
-}

@@ -1,6 +1,0 @@
-package fr.dawan.exercice_jpa.results;
-
-public class StatLivre {
-
-    private Livre livre;
-}

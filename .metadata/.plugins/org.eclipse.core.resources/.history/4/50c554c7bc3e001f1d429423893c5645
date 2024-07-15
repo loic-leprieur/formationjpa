@@ -1,8 +1,0 @@
-package fr.dawan.requetejpa.entities;
-
-public class ArticleResultat {
-
-    private String description;
-
-    private double prix;
-}

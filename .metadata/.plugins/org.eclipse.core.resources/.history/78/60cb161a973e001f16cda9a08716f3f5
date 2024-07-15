@@ -1,6 +1,0 @@
-package fr.dawan.exercice_jpa.entities;
-
-@EmbeddedId
-public class CommandePizzaPK {
-
-}

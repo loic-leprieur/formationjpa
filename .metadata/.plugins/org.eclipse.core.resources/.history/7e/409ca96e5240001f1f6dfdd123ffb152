@@ -1,7 +1,0 @@
-package fr.dawan.jpa.entities.interceptor;
-
-import fr.dawan.jpa.entities.heritage.BaseEntity;
-
-public abstract class BaseAuditable extends BaseEntity {
-
-}

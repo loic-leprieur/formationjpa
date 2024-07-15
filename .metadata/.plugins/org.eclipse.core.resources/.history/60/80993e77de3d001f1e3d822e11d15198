@@ -1,5 +1,0 @@
-package fr.dawan.jpa.enums;
-
-public enum TypeTelephone {
-
-}

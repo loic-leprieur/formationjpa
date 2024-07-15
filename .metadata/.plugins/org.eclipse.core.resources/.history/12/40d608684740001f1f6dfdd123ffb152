@@ -1,7 +1,0 @@
-package fr.dawan.exercice_jpa.dao;
-
-import fr.dawan.exercice_jpa.entities.Livre;
-
-public class LivreDaoCriteria extends AbstractDaoCriteria<Livre> {
-
-}
