@@ -1,6 +1,8 @@
-### Projets réalisées lors de la 'Formation JPA' par l'organisme Dawan
+## Projets réalisées lors de la 'Formation JPA' par l'organisme Dawan
 
-## jpa
+#### Tables avec leurs données et création des bases de données dans le répertoire 'Notes'
+
+### jpa
 
 - Configuration
 - Création des entités
@@ -8,11 +10,11 @@
 - Requêtes Criteria (comme pour JPQL)
 
 
-## requetejpa
+### requetejpa
 
 - Tests des possibilités avec JPA JPQL et Criteria avec des entités Article, Marque...
 
-## exercice_jpa
+### exercice_jpa
 
 - Exercice 1 : Création d'entités et requêtes pour une pizzeria
 - Exercice 2 : Création d'entités et requêtes pour une bibliothèque
