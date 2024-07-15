@@ -1,0 +1,9 @@
+package fr.dawan.jpa.entities.relations;
+
+import java.io.Serializable;
+
+import fr.dawan.jpa.entities.heritage.BaseEntity;
+
+public class Ville extends BaseEntity implements Serializable {
+
+}

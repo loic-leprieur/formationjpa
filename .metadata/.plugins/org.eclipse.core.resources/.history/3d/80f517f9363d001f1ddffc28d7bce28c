@@ -1,0 +1,10 @@
+package fr.dawan.jpa.entities;
+
+public class Adresse {
+
+    private String ville;
+    
+    private String rue;
+    
+    private String codePostal;
+}

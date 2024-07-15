@@ -1,0 +1,5 @@
+package fr.dawan.exercice_jpa.enums;
+
+public enum Base {
+    ROUGe, ROSE, BLANCHE
+}

@@ -1,0 +1,17 @@
+package fr.dawan.jpa;
+
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        Article article = new Article(2.0, "Bonbon");
+        
+        System.out.println(article.getDescription());
+        
+    }
+}

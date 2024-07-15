@@ -1,0 +1,8 @@
+package fr.dawan.jpa;
+
+public class Main03Dao {
+
+    public static void main(String[] args) {
+
+    }
+}

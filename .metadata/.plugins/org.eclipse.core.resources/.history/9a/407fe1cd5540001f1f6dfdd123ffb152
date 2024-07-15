@@ -1,0 +1,21 @@
+package fr.dawan.jpa.listeners;
+
+import java.time.LocalDateTime;
+
+import fr.dawan.jpa.entities.interceptor.BaseAuditable;
+import jakarta.persistence.PrePersist;
+import jakarta.persistence.PreRemove;
+
+@Log
+public class AuditListener {
+
+    @PrePersist
+    public void onPersist(BaseAuditable ba) {
+        ba.setCreated(LocalDateTime.now());
+    }
+    
+    @PreRemove
+    public void onUpdate() {
+        
+    }
+}

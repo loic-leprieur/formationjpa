@@ -1,0 +1,29 @@
+package fr.dawan.jpa;
+
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.EqualsAndHashCode.Include;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@EqualsAndHashCode(onlyExplicitlyIncluded = true, callSuper = true)
+public class Article {
+
+    private double prix;
+    
+    @Include
+    private String description;
+    
+    @Include
+    private Marque marque;
+
+    public Article(double prix) {
+        super();
+        this.prix = prix;
+    }
+}

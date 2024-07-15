@@ -1,0 +1,18 @@
+package fr.dawan.jpa;
+
+/**
+ * Hello world!
+ *
+ */
+public class App {
+    public static void main(String[] args) {
+        Article a1 = new Article(2.0, "Bonbon à la banane", null);
+
+        System.out.println(a1.toString());
+
+        // Builder
+
+        Article a2 = Article.builder().description("Bonbon à la fraise").prix(1.30);
+
+    }
+}

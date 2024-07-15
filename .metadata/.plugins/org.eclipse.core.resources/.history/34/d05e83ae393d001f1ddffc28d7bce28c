@@ -1,0 +1,11 @@
+package fr.dawan.jpa.entities;
+
+import java.io.Serializable;
+
+import jakarta.persistence.Entity;
+
+@Entity
+@Table(name = "personne_adresse")
+public class PersonneAdresse implements Serializable {
+
+}

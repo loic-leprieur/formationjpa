@@ -1,0 +1,47 @@
+package fr.dawan.exercice_jpa.entities;
+
+import java.io.Serializable;
+import java.time.LocalDate;
+import java.util.Set;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@ToString
+
+@Entity
+@Table(name = "auteurs")
+public class Auteur extends BaseEntity implements Serializable {
+
+    @Column(length = 50, nullable = false)
+    private String nom;
+
+    @Column(length = 50, nullable = false)
+    private String prenom;
+
+    @Column(name = "naissance", nullable = false)
+    private LocalDate dateNaissance;
+
+    @Column(name = "deces")
+    private LocalDate dateDeces;
+
+    @ManyToOne
+    @Column(name = "nation")
+    private Nation nationnalite;
+
+    @ManyToMany
+    private Set<Livre> auteurs;
+
+}

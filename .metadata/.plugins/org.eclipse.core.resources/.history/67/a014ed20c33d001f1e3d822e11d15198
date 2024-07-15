@@ -1,0 +1,8 @@
+package fr.dawan.jpa.entities;
+
+import java.io.Serializable;
+
+@Entity
+public class Entreprise implements Serializable {
+
+}

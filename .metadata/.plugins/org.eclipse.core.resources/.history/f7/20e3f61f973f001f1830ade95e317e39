@@ -1,0 +1,10 @@
+package fr.dawan.requetejpa.entities;
+
+import java.io.Serializable;
+
+import jakarta.persistence.Entity;
+
+@Entity
+public class Logo extends BaseEntity implements Serializable {
+
+}

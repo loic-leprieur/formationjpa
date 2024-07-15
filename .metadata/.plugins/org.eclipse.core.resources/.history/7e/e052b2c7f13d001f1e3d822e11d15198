@@ -1,0 +1,13 @@
+package fr.dawan.jpa.dao;
+
+import fr.dawan.jpa.entities.heritage.CompteBancaire;
+import jakarta.persistence.EntityManager;
+
+public class CompteBancaireDao extends AbstractDao<CompteBancaire> {
+
+    public CompteBancaireDao(EntityManager em, Class<CompteBancaire> classEntity) {
+        super(em, classEntity);
+        // TODO Auto-generated constructor stub
+    }
+
+}

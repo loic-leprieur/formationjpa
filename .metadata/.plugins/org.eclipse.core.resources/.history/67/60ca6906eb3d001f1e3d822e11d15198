@@ -1,0 +1,10 @@
+package fr.dawan.exercice_jpa.entities;
+
+import java.io.Serializable;
+
+public class Livreur extends BaseEntity implements Serializable {
+
+    private String nom;
+    
+    private String telephone;
+}

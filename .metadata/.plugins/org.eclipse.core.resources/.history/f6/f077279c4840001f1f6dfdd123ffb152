@@ -1,0 +1,33 @@
+package fr.dawan.exercice_jpa.criteria;
+
+import java.util.List;
+
+import fr.dawan.exercice_jpa.entities.Livre;
+import jakarta.persistence.criteria.CriteriaQuery;
+import jakarta.persistence.criteria.Root;
+
+public class LivreDaoCriteria extends AbstractDaoCriteria<Livre> {
+
+    
+    public List<Livre> findByIntervalAnnnee(int anneeMin, int anneeMax) {
+        CriteriaQuery<Livre> cq = cb.createQuery(Livre.class);
+                
+        Root<Livre> lr = cq.from(Livre.class);
+        
+        cq.select(lr).where(cb.between(lr.get("anneeSortie"), anneeMin, anneeMax));
+        
+        return createTypedQuery(cq).getResultList();
+
+    }
+    
+    public long countByAnneeSortie(int anneeSortie) {
+        
+        CriteriaQuery<Long> cq = cb.createQuery(Long.class);
+        
+        Root<Livre> lr = cq.from(Livre.class);
+        
+        cq.select(cb.count(lr)).where(cb.equal(lr.get("anneeSortie"), anneeSortie));
+        
+        createLongQuery(null)
+    }
+}

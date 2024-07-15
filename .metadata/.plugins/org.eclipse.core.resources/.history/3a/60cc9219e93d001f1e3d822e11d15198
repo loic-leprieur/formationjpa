@@ -1,0 +1,13 @@
+package fr.dawan.exercice_jpa.entities;
+
+import java.time.LocalDateTime;
+
+import jakarta.persistence.Version;
+
+public abstract class BaseEntity {
+
+    private long id;
+
+    @Version
+    private LocalDateTime version;
+}

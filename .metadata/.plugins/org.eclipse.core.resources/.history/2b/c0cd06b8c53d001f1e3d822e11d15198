@@ -1,0 +1,28 @@
+package fr.dawan.jpa.entities.heritage;
+
+import java.io.Serializable;
+
+import jakarta.persistence.Entity;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Setter
+@Getter
+@ToString
+
+@Entity
+@Table(name = "compte_bancaires")
+public class CompteBancaire implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    private String titulaire;
+
+    private double solde;
+
+}

@@ -1,0 +1,8 @@
+package fr.dawan.exercice_jpa.results;
+
+import fr.dawan.exercice_jpa.entities.Livre;
+
+public class StatLivre {
+
+    private Livre livre;
+}

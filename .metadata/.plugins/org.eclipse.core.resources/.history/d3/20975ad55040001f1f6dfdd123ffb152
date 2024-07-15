@@ -1,0 +1,36 @@
+package fr.dawan.jpa.entities;
+
+import java.io.Serializable;
+import java.time.LocalDate;
+
+import fr.dawan.jpa.entities.heritage.BaseEntity;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+@Getter
+@Setter
+
+@Entity
+@Table(name = "contrats")
+public class Contrat extends BaseEntity implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+    
+    private String nomClient;
+
+    private LocalDate debut;
+    
+    private int duree;
+    
+    @Transient
+    private LocalDate fin;
+}

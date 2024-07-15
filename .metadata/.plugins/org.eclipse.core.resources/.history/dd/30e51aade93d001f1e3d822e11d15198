@@ -1,0 +1,45 @@
+package fr.dawan.exercice_jpa.entities;
+
+import java.io.Serializable;
+
+import fr.dawan.exercice_jpa.enums.Base;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.Lob;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Entity
+@Table(name = "pizzas")
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Getter
+@ToString
+@Builder
+public class Pizza extends BaseEntity implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    @Column(nullable = false)
+    private String nom;
+
+    @Enumerated
+    @Column(nullable = false)
+    private Base base = Base.ROUGE;
+
+    @Column(nullable = false)
+    private double prix = 10;
+
+    @Column(nullable = true)
+    @Lob
+    private byte[] photo;
+
+}

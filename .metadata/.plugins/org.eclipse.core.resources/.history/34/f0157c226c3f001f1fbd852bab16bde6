@@ -1,0 +1,22 @@
+package fr.dawan.exercice_jpa.dao;
+
+import java.util.List;
+
+import fr.dawan.exercice_jpa.entities.Categorie;
+import fr.dawan.exercice_jpa.entities.Livre;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.TypedQuery;
+
+public class CategorieDao extends AbstractDao<Categorie> {
+
+    public CategorieDao(EntityManager em) {
+        super(em, Categorie.class);
+    }
+
+    public List<Livre> findByCategorie(Categorie categorie) {
+        TypedQuery<Livre> query = em.createQuery("SELECT l FROM Livre l WHERE l.categorie = :categorie", Livre.class);
+
+        query.setParameter("categorie", categorie);
+        return query.getResultList();
+    }
+}

@@ -1,0 +1,7 @@
+package fr.dawan.jpa;
+
+public class Marque {
+
+    private String nom;
+    
+}

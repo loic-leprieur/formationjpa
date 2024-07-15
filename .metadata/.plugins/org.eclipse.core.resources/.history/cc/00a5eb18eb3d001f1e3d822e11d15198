@@ -1,0 +1,5 @@
+package fr.dawan.exercice_jpa.entities;
+
+public class Client {
+
+}

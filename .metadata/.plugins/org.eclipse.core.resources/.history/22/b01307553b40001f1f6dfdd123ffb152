@@ -1,0 +1,54 @@
+package fr.dawan.exercice_jpa.dao;
+
+import java.util.List;
+
+import fr.dawan.exercice_jpa.entities.BaseEntity;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.TypedQuery;
+import jakarta.persistence.criteria.CriteriaBuilder;
+
+public abstract class AbstractCriteriaDao<T extends BaseEntity> implements DaoInterface {
+    
+    private EntityManager em;
+    
+    private Class<T> classEntity;
+    
+    public TypedQuery<T> createQuery(CriteriaBuilder cq) {
+       return em.createQuery(cq, classEntity);
+    }
+    
+    public void saveOrUpdate(T entity) {
+        
+    }
+
+    @Override
+    public void delete(BaseEntity entity) {
+        // TODO Auto-generated method stub
+        
+    }
+
+    @Override
+    public void deleteById(long id) {
+        // TODO Auto-generated method stub
+        
+    }
+
+    @Override
+    public BaseEntity findById(long id) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public List findAll() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public long count() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+    
+}

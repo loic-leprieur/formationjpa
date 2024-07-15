@@ -1,0 +1,24 @@
+package fr.dawan.jpa.entities.interceptor;
+
+import java.time.LocalDateTime;
+
+import fr.dawan.jpa.entities.heritage.BaseEntity;
+import jakarta.persistence.MappedSuperclass;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+
+@MappedSuperclass
+public abstract class BaseAuditable extends BaseEntity {
+
+    private static final long serialVersionUID = 1L;
+    
+    private LocalDateTime created;
+    
+    private LocalDateTime modified;
+
+}

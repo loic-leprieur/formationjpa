@@ -1,0 +1,20 @@
+package fr.dawan.jpa.entities;
+
+import java.io.Serializable;
+import java.time.LocalDate;
+
+import fr.dawan.jpa.entities.heritage.BaseEntity;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "contrats")
+public class Contrat extends BaseEntity implements Serializable {
+
+    
+    private LocalDate debut;
+    
+    private int duree;
+    
+    private LocalDate fin;
+}

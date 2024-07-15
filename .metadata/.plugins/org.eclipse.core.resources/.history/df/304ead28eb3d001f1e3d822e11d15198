@@ -1,0 +1,8 @@
+package fr.dawan.exercice_jpa.entities;
+
+import jakarta.persistence.Table;
+
+@Table(name = "clients")
+public class Client {
+
+}

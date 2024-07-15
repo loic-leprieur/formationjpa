@@ -1,0 +1,12 @@
+package fr.dawan.jpa.entities;
+
+import java.io.Serializable;
+
+import fr.dawan.jpa.entities.heritage.BaseEntity;
+import jakarta.persistence.Entity;
+
+@Entity
+@Table(name = "contrats")
+public class Contrat extends BaseEntity implements Serializable {
+
+}

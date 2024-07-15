@@ -1,0 +1,20 @@
+package fr.dawan.exercice_jpa.entities;
+
+import java.io.Serializable;
+
+import jakarta.persistence.Entity;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@ToString
+
+@Entity
+@Table(name = "auteurs")
+public class Auteur extends BaseEntity implements Serializable {
+
+}

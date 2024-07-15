@@ -1,0 +1,7 @@
+package fr.dawan.jpa.dao;
+
+import fr.dawan.jpa.entities.heritage.CompteBancaire;
+
+public class CompteBancaireDao extends AbstractDao<CompteBancaire> {
+
+}

@@ -1,0 +1,9 @@
+package fr.dawan.jpa.entities.interceptor;
+
+public class Utilisateur extends BaseAuditable{
+
+    private static final long serialVersionUID = 1L;
+    
+    
+
+}

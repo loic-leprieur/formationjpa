@@ -1,0 +1,11 @@
+package fr.dawan.exercice_jpa.entities;
+
+import jakarta.persistence.Embeddable;
+
+@Embeddable
+public class CommandePizzaPK {
+
+    private long pizzaId;
+
+    private long commandeId;
+}

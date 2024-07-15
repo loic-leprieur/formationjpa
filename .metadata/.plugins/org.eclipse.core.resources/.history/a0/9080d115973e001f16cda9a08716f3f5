@@ -1,0 +1,10 @@
+package fr.dawan.exercice_jpa.entities;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+
+public class CommandePizzaPK {
+
+
+}

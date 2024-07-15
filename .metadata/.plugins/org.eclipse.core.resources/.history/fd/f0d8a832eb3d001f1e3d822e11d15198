@@ -1,0 +1,13 @@
+package fr.dawan.exercice_jpa.entities;
+
+import java.io.Serializable;
+
+import jakarta.persistence.Table;
+
+@Table(name = "clients")
+public class Client extends BaseEntity implements Serializable{
+
+    private String nom;
+
+    private String adresse;
+}

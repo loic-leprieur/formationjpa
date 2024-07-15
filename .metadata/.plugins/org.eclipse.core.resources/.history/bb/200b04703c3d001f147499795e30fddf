@@ -1,0 +1,18 @@
+package fr.dawan.exercice_jpa.entities;
+
+import java.io.Serializable;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "commande")
+public class Commande implements Serializable {
+
+    private static final long serialVersionUID = 6257628562760615568L;
+    
+    private LocalTime heurCommande;
+    
+    private LocalTime heureLivraison;
+
+}

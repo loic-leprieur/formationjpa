@@ -1,0 +1,10 @@
+package fr.dawan.jpa.entities;
+
+import java.io.Serializable;
+
+import fr.dawan.jpa.entities.heritage.BaseEntity;
+
+@Entity
+public class Contrat extends BaseEntity implements Serializable {
+
+}

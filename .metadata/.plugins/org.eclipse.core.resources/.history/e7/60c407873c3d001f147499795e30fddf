@@ -1,0 +1,25 @@
+package fr.dawan.exercice_jpa.entities;
+
+import java.io.Serializable;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Entity
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@ToString
+
+@Table(name = "ingredient")
+public class Ingredient implements Serializable {
+
+    private static final long serialVersionUID = -7969483921922797979L;
+    private String nom;
+
+}

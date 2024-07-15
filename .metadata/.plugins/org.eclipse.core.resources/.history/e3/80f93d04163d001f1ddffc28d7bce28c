@@ -1,0 +1,30 @@
+package fr.dawan.jpa;
+
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode.Include;
+
+@AllArgsConstructor
+//@Getter
+//@Setter
+//@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+//@ToString(onlyExplicitlyIncluded = true, callSuper = true)
+//@Data
+//@Value
+public class Article {
+
+    @lombok.ToString.Include(name = "prixUnitaire", rank = 0)
+    private double prix;
+
+    @Include
+    @lombok.ToString.Include(rank = 1)
+    private String description;
+
+    // @Include
+    // @Exclude
+    private Marque marque;
+
+//    public Article(double prix) {
+//        super();
+//        this.prix = prix;
+//    }
+}

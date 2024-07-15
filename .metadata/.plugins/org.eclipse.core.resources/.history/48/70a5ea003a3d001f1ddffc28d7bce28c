@@ -1,0 +1,18 @@
+package fr.dawan.jpa.entities;
+
+import java.io.Serializable;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "personne_adresse")
+public class PersonneAdresse implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    private String prenom;
+
+    private String nom;
+
+}

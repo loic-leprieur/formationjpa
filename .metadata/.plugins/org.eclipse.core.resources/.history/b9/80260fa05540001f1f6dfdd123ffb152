@@ -1,0 +1,12 @@
+package fr.dawan.jpa.listeners;
+
+public class AuditListener {
+
+    public void onPersist() {
+        
+    }
+    
+    public void onUpdate() {
+        
+    }
+}

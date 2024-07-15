@@ -1,0 +1,24 @@
+package fr.dawan.exercice_jpa.entities;
+
+import java.io.Serializable;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@Entity
+
+public class Nation extends BaseEntity implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    @Column(length = 100, nullable = false)
+    private String nom;
+}

@@ -1,0 +1,17 @@
+package fr.dawan.exercice_jpa.dao;
+
+import java.util.List;
+
+import fr.dawan.exercice_jpa.entities.Auteur;
+import jakarta.persistence.EntityManager;
+
+public class AuteurDao extends AbstractDao<Auteur> {
+
+    public AuteurDao(EntityManager em) {
+        super(em, Auteur.class);
+    }
+
+    public List<Auteur> findAlive() {
+
+    }
+}

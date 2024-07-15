@@ -1,0 +1,80 @@
+package fr.dawan.exercice_jpa;
+
+import java.time.LocalTime;
+
+import fr.dawan.exercice_jpa.entities.Client;
+import fr.dawan.exercice_jpa.entities.Commande;
+import fr.dawan.exercice_jpa.entities.Ingredient;
+import fr.dawan.exercice_jpa.entities.Livreur;
+import fr.dawan.exercice_jpa.entities.Pizza;
+import fr.dawan.exercice_jpa.enums.Base;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.EntityTransaction;
+import jakarta.persistence.Persistence;
+
+/**
+ * Création de commandes de pizzas pour un restaurant
+ *
+ */
+public class Main02 {
+    public static void main(String[] args) {
+        // Création EntityManagerFactory
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("formationjpa");
+        // Création EntityManager
+        EntityManager em = emf.createEntityManager();
+        // Création de la transaction
+        EntityTransaction tx = em.getTransaction();
+
+        Pizza margarita = Pizza.builder().nom("Pizza Margarita").prix(12).build();
+        Pizza flam = Pizza.builder().base(Base.BLANCHE).nom("Tarte flambée flammekueche").prix(13.5).build();
+        Ingredient lardons = new Ingredient("Lardons");
+        Ingredient oignons = new Ingredient("Oignons");
+        Ingredient parmesan = new Ingredient("Parmesan");
+
+        flam.addIngredient(lardons);
+        flam.addIngredient(oignons);
+
+        margarita.addIngredient(parmesan);
+
+        LocalTime heureCommande = LocalTime.of(19, 30);
+        LocalTime heureLivraison = LocalTime.of(20, 00);
+
+        Commande commande1 = new Commande(heureCommande, heureLivraison);
+        Commande commande2 = new Commande(heureCommande, heureLivraison);
+
+        Livreur livreur1 = new Livreur("John Doe", "06 07 08 09 10");
+
+        Client client = new Client("Jean-Luc M.", "1 place de la république, 75000 Paris");
+
+        commande1.setLivreur(livreur1);
+        commande1.setClient(client);
+
+        try {
+            tx.begin();
+
+            em.persist(margarita);
+            em.persist(flam);
+
+            em.persist(lardons);
+            em.persist(parmesan);
+            em.persist(oignons);
+
+            em.persist(commande1);
+            em.persist(commande2);
+
+            em.persist(livreur1);
+
+            margarita.setPrix(margarita.getPrix() * 1.1);
+            flam.setPrix(flam.getPrix() * 1.1);
+
+            tx.commit();
+        } catch (Exception e) {
+            tx.rollback();
+            e.printStackTrace();
+        }
+
+        em.close();
+        emf.close();
+    }
+}

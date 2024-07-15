@@ -1,0 +1,16 @@
+package fr.dawan.exercice_jpa.entities;
+
+import java.io.Serializable;
+
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@Entity
+
+public class Nation extends BaseEntity implements Serializable {
+
+}

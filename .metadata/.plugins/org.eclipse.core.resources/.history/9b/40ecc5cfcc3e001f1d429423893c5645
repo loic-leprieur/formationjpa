@@ -1,0 +1,40 @@
+package fr.dawan.exercice_jpa.entities;
+
+import java.io.Serializable;
+import java.util.Set;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+import lombok.ToString.Exclude;
+
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor
+
+@Getter
+@Setter
+@ToString
+public class Livre extends BaseEntity implements Serializable {
+
+    private static final long serialVersionUID = -835185631968922070L;
+
+    @Column(length = 255, nullable = false)
+    private String titre;
+
+    @Column(name = "annee_sortie", nullable = false)
+    private int anneeSortie;
+
+    @ManyToOne
+    private Categorie categorie;
+
+    @ManyToMany
+    @Exclude
+    private Set<Auteur> auteurs;
+}

@@ -1,0 +1,37 @@
+package fr.dawan.exercice_jpa.entities;
+
+import java.io.Serializable;
+
+import jakarta.persistence.EmbeddedId;
+import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@ToString
+
+@Entity
+@Table(name = "commande_pizza")
+public class CommandePizza implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    @EmbeddedId
+    private CommandePizzaPK id = new CommandePizzaPK();
+
+    @ManyToOne
+    private Commande commande;
+
+    @ManyToOne
+    private Pizza pizza;
+
+    private int quantite;
+}

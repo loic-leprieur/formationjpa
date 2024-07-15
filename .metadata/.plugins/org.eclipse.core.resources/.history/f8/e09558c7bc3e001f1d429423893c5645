@@ -1,0 +1,15 @@
+package fr.dawan.requetejpa.entities;
+
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+public class ArticleResultat {
+
+    private String description;
+
+    private double prix;
+}

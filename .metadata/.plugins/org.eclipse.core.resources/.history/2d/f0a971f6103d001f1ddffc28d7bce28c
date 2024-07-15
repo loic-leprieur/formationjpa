@@ -1,0 +1,16 @@
+package fr.dawan.jpa;
+
+import lombok.NoArgsConstructor;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    @NoArgsConstructor
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+    }
+}

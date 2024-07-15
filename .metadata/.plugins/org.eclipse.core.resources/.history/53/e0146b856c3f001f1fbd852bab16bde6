@@ -1,0 +1,29 @@
+package fr.dawan.exercice_jpa.dao;
+
+import java.util.List;
+
+import fr.dawan.exercice_jpa.entities.Auteur;
+import fr.dawan.exercice_jpa.entities.Livre;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.TypedQuery;
+
+public class AuteurDao extends AbstractDao<Auteur> {
+
+    public AuteurDao(EntityManager em) {
+        super(em, Auteur.class);
+    }
+
+    public List<Auteur> findByAuteur(Auteur auteur) {
+
+        TypedQuery<Auteur> query = em.createQuery("SELECT a FROM Auteur a WHERE a=:auteur", Auteur.class);
+
+        query.setParameter("auteur", auteur);
+        return query.getResultList();
+    }
+
+    public List<Livre> findMultiAuteur() {
+        TypedQuery<Livre> query = em.createQuery("SELECT l FROM Livre l WHERE SIZE(l.auteurs) > 1", Livre.class);
+
+        return query.getResultList();
+    }
+}

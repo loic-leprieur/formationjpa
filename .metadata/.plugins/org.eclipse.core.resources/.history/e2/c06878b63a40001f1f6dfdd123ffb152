@@ -1,0 +1,8 @@
+package fr.dawan.exercice_jpa.dao;
+
+import fr.dawan.exercice_jpa.entities.BaseEntity;
+
+public interface DaoInterface<T extends BaseEntity> {
+
+    public void saveOrUpdate(T entity)
+}

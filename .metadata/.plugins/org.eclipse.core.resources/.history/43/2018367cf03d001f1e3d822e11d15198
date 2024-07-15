@@ -1,0 +1,44 @@
+package fr.dawan.jpa.dao;
+
+import java.util.List;
+
+import fr.dawan.jpa.entities.heritage.BaseEntity;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityTransaction;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+@AllArgsConstructor
+public abstract class AbstractDao<T extends BaseEntity> {
+
+    @Getter(value = AccessLevel.PROTECTED)
+    private EntityManager em;
+
+    private Class<T> classEntity;
+
+    public void saveOrUpdate(T entity) {
+        EntityTransaction tx = em.getTransaction();
+
+        tx.begin();
+
+        tx.commit();
+    }
+
+    public void delete(T entity) {
+
+    }
+
+    public void deleteById(long id) {
+
+    }
+
+    public T findById(long id) {
+
+    }
+
+    public List<T> findAll() {
+
+    }
+
+}

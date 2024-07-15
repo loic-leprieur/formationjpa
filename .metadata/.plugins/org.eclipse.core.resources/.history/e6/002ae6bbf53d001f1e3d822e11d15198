@@ -1,0 +1,13 @@
+package fr.dawan.jpa.entities.relations;
+
+import java.io.Serializable;
+
+import fr.dawan.jpa.entities.heritage.BaseEntity;
+
+public class Maire extends BaseEntity implements Serializable {
+    
+    private String prenom;
+    
+    private String nom;
+    
+}

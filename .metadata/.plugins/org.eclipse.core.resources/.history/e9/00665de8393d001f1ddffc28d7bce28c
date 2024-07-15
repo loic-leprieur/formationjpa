@@ -1,0 +1,11 @@
+package fr.dawan.jpa.entities;
+
+import jakarta.persistence.Embeddable;
+
+@Embeddable
+public class PersonneAdressePK {
+
+    private long idAdresse;
+
+    private long idPersonne;
+}

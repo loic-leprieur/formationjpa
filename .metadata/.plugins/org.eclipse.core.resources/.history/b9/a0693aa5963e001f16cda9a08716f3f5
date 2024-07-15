@@ -1,0 +1,17 @@
+package fr.dawan.exercice_jpa.entities;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "commande_pizza")
+public class CommandePizza {
+
+    @ManyToOne
+    private Commande commande;
+
+    @ManyToOne
+    private Pizza pizza;
+
+    private int quantite;
+}

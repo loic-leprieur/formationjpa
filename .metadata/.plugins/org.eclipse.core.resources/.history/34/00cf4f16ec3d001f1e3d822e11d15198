@@ -1,0 +1,28 @@
+package fr.dawan.exercice_jpa.entities;
+
+import java.io.Serializable;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@ToString
+
+@Table(name = "livreurs")
+@Entity
+public class Livreur extends BaseEntity implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    private String nom;
+
+    private String telephone;
+}

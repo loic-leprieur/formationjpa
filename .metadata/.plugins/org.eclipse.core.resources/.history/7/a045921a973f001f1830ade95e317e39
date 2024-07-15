@@ -1,0 +1,7 @@
+package fr.dawan.requetejpa.entities;
+
+import java.io.Serializable;
+
+public class Logo extends BaseEntity implements Serializable {
+
+}

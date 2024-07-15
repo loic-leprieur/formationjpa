@@ -1,0 +1,17 @@
+package fr.dawan.jpa.listeners;
+
+import jakarta.persistence.PrePersist;
+import jakarta.persistence.PreRemove;
+
+public class AuditListener {
+
+    @PrePersist
+    public void onPersist() {
+        
+    }
+    
+    @PreRemove
+    public void onUpdate() {
+        
+    }
+}

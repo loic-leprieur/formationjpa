@@ -1,0 +1,5 @@
+package fr.dawan.jpa.entities.heritage;
+
+public class Personne extends BaseEntity {
+
+}

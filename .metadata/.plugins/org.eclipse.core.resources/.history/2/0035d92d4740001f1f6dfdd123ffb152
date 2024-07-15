@@ -1,0 +1,5 @@
+package fr.dawan.exercice_jpa.dao;
+
+public class LivreDaoCriteria {
+
+}

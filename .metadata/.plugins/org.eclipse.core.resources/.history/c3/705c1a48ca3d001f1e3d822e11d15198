@@ -1,0 +1,19 @@
+package fr.dawan.jpa.entities.heritage;
+
+import jakarta.persistence.Entity;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@ToString
+@Entity
+public class Personne extends BaseEntity {
+
+    private static final long serialVersionUID = 1L;
+    
+    
+
+}

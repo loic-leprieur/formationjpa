@@ -1,0 +1,14 @@
+package fr.dawan.exercice_jpa.results;
+
+import fr.dawan.exercice_jpa.entities.Livre;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+public class StatLivre {
+
+    private Livre livre;
+}

@@ -1,0 +1,19 @@
+package fr.dawan.exercice_jpa.criteria;
+
+import java.util.List;
+
+import fr.dawan.exercice_jpa.entities.Livre;
+import jakarta.persistence.criteria.CriteriaQuery;
+
+public class LivreDaoCriteria extends AbstractDaoCriteria<Livre> {
+
+    
+    private List<Livre> findByIntervalAnnnee(int anneeMin, int anneeMax) {
+        CriteriaQuery<Livre> cq = cb.createQuery(Livre.class);
+                
+        lr = cq.from(Livre.class);
+        
+        createTypedQuery(cq);
+
+    }
+}
