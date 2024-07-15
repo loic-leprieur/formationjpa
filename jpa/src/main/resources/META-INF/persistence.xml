@@ -11,11 +11,11 @@
             <!-- Configuration de la datasource -->
             <!-- Créer une base de données formationjpa et ajouter ici le nom d'utilisateur et et le mot de passe -->
             <property name="jakarta.persistence.jdbc.url"
-                      value="jdbc:mariadb://planetnine:33065/formationjpa"/>
+                      value="jdbc:mariadb://CHANGE_ME:CHANGE_ME/formationjpa"/>
             <property name="jakarta.persistence.jdbc.user"
-                      value=""/>
+                      value="CHANGE_ME"/>
             <property name="jakarta.persistence.jdbc.password"
-                      value=""/>
+                      value="CHANGE_ME"/>
             <property name="jakarta.persistence.jdbc.driver"
                       value="org.mariadb.jdbc.Driver"/>
             
