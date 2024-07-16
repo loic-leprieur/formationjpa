@@ -2,6 +2,7 @@
 
 #### Tables avec leurs données et création des bases de données dans le répertoire 'Notes'
 #### NE PAS OUBLIER DE CHANGER DANS persistence.xml les identifiants de connexion aux bases de données
+#### Config Eclipse pour Lombok : https://projectlombok.org/setup/eclipse
 
 
 ### jpa
