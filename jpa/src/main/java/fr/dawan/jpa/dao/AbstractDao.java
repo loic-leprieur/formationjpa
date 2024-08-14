@@ -23,13 +23,11 @@ public abstract class AbstractDao<T extends BaseEntity> {
 
         try {
             tx.begin();
-
             if (entity.getId() == 0) {
                 em.persist(entity);
             } else {
                 em.merge(entity);
             }
-
             tx.commit();
         } catch (Exception e) {
             tx.rollback();
@@ -39,7 +37,6 @@ public abstract class AbstractDao<T extends BaseEntity> {
     }
 
     public void delete(T entity) {
-
         EntityTransaction tx = em.getTransaction();
 
         try {
@@ -53,7 +50,7 @@ public abstract class AbstractDao<T extends BaseEntity> {
     }
 
     public void deleteById(long id) {
-        delete(em.find(classEntity, id));
+        delete(findById(id));
     }
 
     public T findById(long id) {
@@ -61,9 +58,7 @@ public abstract class AbstractDao<T extends BaseEntity> {
     }
 
     public List<T> findAll() {
-
         TypedQuery<T> query = em.createQuery("SELECT e FROM " + classEntity.getName() + " e", classEntity);
         return query.getResultList();
     }
-
 }

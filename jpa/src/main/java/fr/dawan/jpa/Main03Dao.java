@@ -7,36 +7,29 @@ import fr.dawan.jpa.entities.heritage.Personne;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
-import lombok.extern.java.Log;
 
-@Log
 public class Main03Dao {
 
     public static void main(String[] args) {
-
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("formationjpa");
         EntityManager em = emf.createEntityManager();
-
         PersonneDao dao = new PersonneDao(em);
 
-        Personne per1 = new Personne("John", "Doe", LocalDate.of(1999, 12, 31));
-        dao.saveOrUpdate(new Personne("Jane", "Doe", LocalDate.of(2003, 3, 9)));
-        dao.saveOrUpdate(new Personne("Jo", "Dalton", LocalDate.of(2007, 11, 4)));
+        Personne per1 = new Personne("John", "Doe", LocalDate.of(1990, 10, 10));
+        dao.saveOrUpdate(new Personne("Jane", "Doe", LocalDate.of(2003, 10, 10)));
+        dao.saveOrUpdate(new Personne("Jo", "Dalton", LocalDate.of(1991, 1, 10)));
         dao.saveOrUpdate(per1);
-        dao.findAll().forEach(p -> log.info(p.toString()));
-
+        dao.findAll().forEach(System.out::println);
         Personne per1a = dao.findById(per1.getId());
-
-        log.info(per1a.toString());
-
-        per1a.setDateNaissance(LocalDate.of(2000, 1, 1));
+        System.out.println(per1a.toString());
+        per1a.setDateNaissance(LocalDate.of(1990, 10, 11));
         dao.saveOrUpdate(per1a);
-        log.info(per1.toString());
+        System.out.println(per1a.toString());
         dao.delete(per1a);
-
-        dao.findAll().forEach(p -> log.info(p.toString()));
+        dao.findAll().forEach(System.out::println);
 
         em.close();
         emf.close();
     }
+
 }

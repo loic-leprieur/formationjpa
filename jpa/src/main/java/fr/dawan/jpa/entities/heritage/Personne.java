@@ -2,7 +2,6 @@ package fr.dawan.jpa.entities.heritage;
 
 import java.time.LocalDate;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -13,6 +12,7 @@ import lombok.ToString;
 
 @NoArgsConstructor
 @AllArgsConstructor
+
 @Getter
 @Setter
 @ToString
@@ -27,7 +27,6 @@ public class Personne extends BaseEntity {
 
     private String nom;
 
-    @Column(name = "date_naissance")
     private LocalDate dateNaissance;
 
 }

@@ -10,31 +10,26 @@ import jakarta.persistence.Persistence;
 public class Main04OneToOne {
 
     public static void main(String[] args) {
-        // Création EntityManagerFactory
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("formationjpa");
-        // Création EntityManager
         EntityManager em = emf.createEntityManager();
-        // Création de la transaction
         EntityTransaction tx = em.getTransaction();
 
-        Ville stras = new Ville("Strasbourg");
-        Maire maire = new Maire("Jeanne", "Barseghian");
-        stras.setMaire(maire);
-        maire.setVille(stras);
+        Ville lille = new Ville("Lille");
+        Maire maire = new Maire("Martine", "Aubry");
+        lille.setMaire(maire);
+        maire.setVille(lille);
 
         try {
-            tx.begin();
-
+            tx.begin(); 
             em.persist(maire);
-            em.persist(stras);
-
+            em.persist(lille);
             tx.commit();
         } catch (Exception e) {
             tx.rollback();
             e.printStackTrace();
         }
-
         em.close();
         emf.close();
     }
+
 }

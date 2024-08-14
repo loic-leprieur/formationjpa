@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <persistence version="3.0" xmlns="https://jakarta.ee/xml/ns/persistence"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence 
@@ -8,31 +7,24 @@
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <properties>
         
-            <!-- Configuration de la datasource -->
-            <!-- Créer une base de données requetejpa et ajouter ici le nom d'utilisateur et et le mot de passe -->
-            <property name="jakarta.persistence.jdbc.url"
-                      value="jdbc:mariadb://CHANGE_ME:CHANGE_ME/requetejpa"/>
-            <property name="jakarta.persistence.jdbc.user"
-                      value="CHANGE_ME"/>
-            <property name="jakarta.persistence.jdbc.password"
-                      value="CHANGE_ME"/>
-            <property name="jakarta.persistence.jdbc.driver"
-                      value="org.mariadb.jdbc.Driver"/>
-            
-            <!-- Config de l'ORM -->
-            <property name="hibernate.hbm2ddl.auto" 
-                      value="update"/>
-            <property name="hibernate.dialect"
-                      value="org.hibernate.dialect.MariaDBDialect"/>
-            <property name="hibernate.show_sql" 
-                      value="true"/>
-            <property name="hibernate.format_sql"
-                      value="true"/>
-                      
-            <!-- CACHE de niveau 2 -->
-            <property name="hibernate.cache.use_second_level_cache" value="true"/>
-            <property name="hibernate.cache.region.factory_class" value="jcache"/>
-            <property name="hibernate.javax.cache.provider" value="org.ehcache.jsr107.EhcacheCachingProvider"/>
+        <!--  Configuration de la datasource -->
+        <property name="jakarta.persistence.jdbc.url"
+                  value="jdbc:mariadb://localhost:3306/requetejpa"/>
+        <property name="jakarta.persistence.jdbc.user"
+                  value="root"/>
+        <property name="jakarta.persistence.jdbc.password"
+                  value="dawan"/>
+        <property name="jakarta.persistence.jdbc.driver"
+                  value="org.mariadb.jdbc.Driver"/>
+                  
+        <!--  Configuration de l'ORM -->
+        <property name="hibernate.hbm2ddl.auto"
+                  value="create"/>
+        <property name="hibernate.dialect"
+                  value="org.hibernate.dialect.MariaDBDialect"  />
+        <property name="hibernate.show_sql"  value="true"/>
+         <property name="hibernate.format_sql"  value="true"/>
         </properties>
     </persistence-unit>
+
 </persistence>

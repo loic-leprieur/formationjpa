@@ -2,7 +2,6 @@ package fr.dawan.jpa.entities;
 
 import java.io.Serializable;
 
-import fr.dawan.jpa.entities.heritage.BaseEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,22 +14,22 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-@Entity
-@Table(name = "entreprises")
-@AllArgsConstructor
 @NoArgsConstructor
-@Setter
+@AllArgsConstructor
 @Getter
+@Setter
 @ToString
-public class Entreprise extends BaseEntity implements Serializable {
+
+@Entity
+@Table(name="entreprises")
+public class Entreprise implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @Id
-    @SequenceGenerator(name = "ent_seq")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ent_seq")
+    @SequenceGenerator(name="ent_seq")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator ="ent_seq" )
     private long id;
-
+    
     private String nom;
-
 }

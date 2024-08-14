@@ -8,18 +8,23 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-@Embeddable
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 @ToString
+
+//Une classe intégrable va stocker ses données dans la
+//table de l’entité mère ce qui va créer des colonnes supplémentaires
+
+//On annote une classe intégrable avec @Embeddable
+@Embeddable
 public class Adresse {
+
+    private String rue;
 
     @Column(length = 150)
     private String ville;
-
-    private String rue;
 
     @Column(length = 15, name = "code_postal")
     private String codePostal;

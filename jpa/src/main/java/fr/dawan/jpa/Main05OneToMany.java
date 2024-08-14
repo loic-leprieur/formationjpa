@@ -13,40 +13,30 @@ import jakarta.persistence.Persistence;
 public class Main05OneToMany {
 
     public static void main(String[] args) {
-        // Création EntityManagerFactory
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("formationjpa");
-        // Création EntityManager
         EntityManager em = emf.createEntityManager();
-        // Création de la transaction
         EntityTransaction tx = em.getTransaction();
 
-        Article a1 = new Article("Airpods Pro Max", 570, Emballage.CARTON);
-        Article a2 = new Article("iPhone 15", 1000, Emballage.CARTON);
-
-        Marque ma = new Marque("Apple", LocalDate.of(1976, 4, 1));
-
+        Article a1 = new Article("TV 4K", 600, Emballage.CARTON);
+        Article a2 = new Article("Souris", 30, Emballage.PLASTIQUE);
+        Marque ma = new Marque("Marque A", LocalDate.of(1983, 10, 20));
         ma.getArticles().add(a1);
         ma.getArticles().add(a2);
         a1.setMarque(ma);
         a2.setMarque(ma);
 
         System.out.println(a1);
-
         System.out.println(ma);
-
         try {
             tx.begin();
-
-            em.persist(ma);
             em.persist(a1);
             em.persist(a2);
-
+            em.persist(ma);
             tx.commit();
         } catch (Exception e) {
             tx.rollback();
             e.printStackTrace();
         }
-
         em.close();
         emf.close();
     }

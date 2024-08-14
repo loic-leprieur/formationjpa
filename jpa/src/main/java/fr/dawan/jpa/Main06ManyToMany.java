@@ -11,44 +11,36 @@ import jakarta.persistence.Persistence;
 public class Main06ManyToMany {
 
     public static void main(String[] args) {
-        // Création EntityManagerFactory
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("formationjpa");
-        // Création EntityManager
         EntityManager em = emf.createEntityManager();
-        // Création de la transaction
         EntityTransaction tx = em.getTransaction();
-        Article a1 = new Article("Airpods Pro Max", 570, Emballage.CARTON);
-        Article a2 = new Article("iPhone 15", 1000, Emballage.CARTON);
-        Article a3 = new Article("Apple Watch 9", 700, Emballage.CARTON);
-
-        Fournisseur f1 = new Fournisseur("Samsung");
-        Fournisseur f2 = new Fournisseur("TSMC");
-
+        
+        Article a1=new Article("TV 4K",600,Emballage.CARTON); 
+        Article a2=new Article("Souris",30,Emballage.PLASTIQUE); 
+        Article a3=new Article("Clavier",30,Emballage.SANS); 
+      
+        Fournisseur f1=new Fournisseur("Fournisseur 1");
+        Fournisseur f2=new Fournisseur("Fournisseur 2");
         f1.addArticle(a1);
         f1.addArticle(a2);
         f2.addArticle(a1);
         f2.addArticle(a3);
-
         try {
             tx.begin();
-
             em.persist(a1);
             em.persist(a2);
             em.persist(a3);
-
             em.persist(f1);
             em.persist(f2);
-
             System.out.println(a1);
             System.out.println(f1);
-
             tx.commit();
         } catch (Exception e) {
             tx.rollback();
             e.printStackTrace();
         }
-
         em.close();
         emf.close();
     }
+
 }

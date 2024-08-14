@@ -1,10 +1,10 @@
 package fr.dawan.jpa.entities.interceptor;
 
-import java.io.Serializable;
 import java.time.LocalDate;
 
+import org.hibernate.query.sqm.TemporalUnit;
+
 import fr.dawan.jpa.entities.heritage.BaseEntity;
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.PostLoad;
 import jakarta.persistence.PrePersist;
@@ -20,39 +20,39 @@ import lombok.ToString;
 import lombok.extern.java.Log;
 
 @NoArgsConstructor
-@AllArgsConstructor
 @RequiredArgsConstructor
-@ToString
 @Getter
 @Setter
+@ToString
 
 @Log
 @Entity
 @Table(name = "contrats")
-public class Contrat extends BaseEntity implements Serializable {
+public class Contrat extends BaseEntity {
 
     private static final long serialVersionUID = 1L;
-    
-    @Column(name = "nom_client")
+
     @NonNull
-    private String nomClient;
+    private String nonClient;
 
     @NonNull
     private LocalDate debut;
-    
+
     @NonNull
     private Integer duree;
-    
+
     @Transient
     private LocalDate fin;
-    
+
     @PrePersist
-    public void onPrepersist() {
-        log.info("Pre persis");
+    public void onPrepersit() {
+        log.info("Pre persist");
     }
-    
+
     @PostLoad
     public void calculFinContrat() {
+        log.info("Post Load");
         fin = debut.plusYears(duree);
     }
+
 }
