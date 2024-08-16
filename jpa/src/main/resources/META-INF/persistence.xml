@@ -19,7 +19,7 @@
 				value="org.mariadb.jdbc.Driver" />
 
 			<!-- Configuration de l'ORM -->
-			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.hbm2ddl.auto" value="create" />
 			<property name="hibernate.dialect"
 				value="org.hibernate.dialect.MariaDBDialect" />
 			<property name="hibernate.show_sql" value="true" />
