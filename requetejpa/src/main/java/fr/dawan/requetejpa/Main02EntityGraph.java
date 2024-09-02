@@ -90,13 +90,16 @@ public class Main02EntityGraph {
 //            System.out.println(it2.next());
 //        }
         
-        System.out.println(mB.getNom());
-        System.out.println(mB.getDateCreation());
+        if(mB != null) {
+            System.out.println(mB.getNom());
+            System.out.println(mB.getDateCreation());
         
-        var it = mB.getArticles().iterator();
-        Article af = it.next();
-        System.out.println(af);
-        System.out.println(af.getFournisseurs());
+            var it = mB.getArticles().iterator();
+            Article af = it.next();
+            System.out.println(af);
+            System.out.println(af.getFournisseurs());
+        
+        }
         
         emf.close();
     }
