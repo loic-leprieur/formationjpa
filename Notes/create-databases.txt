@@ -1,10 +1,11 @@
+/* Sur une db distante il faut mettre @'%' */
+CREATE USER 'dawan'@'localhost' IDENTIFIED BY 'dawan';
 
 echo "CREATE DATABASE formationjpa" | mysql -u root
-echo "GRANT ALL PRIVILEGES ON formationjpa.* TO  'alara_dev'@'%';" | mysql -u root
-
+echo "GRANT ALL PRIVILEGES ON formationjpa.* TO  'dawan'@'localhost';" | mysql -u root
 
 echo "CREATE DATABASE requetejpa" | mysql -u root
-echo "GRANT ALL PRIVILEGES ON requetejpa.* TO  'alara_dev'@'%';" | mysql -u root
+echo "GRANT ALL PRIVILEGES ON requetejpa.* TO  'dawan'@'localhost';" | mysql -u root
 
 echo "CREATE DATABASE bibliotheque" | mysql -u root
-echo "GRANT ALL PRIVILEGES ON bibliotheque.* TO  'alara_dev'@'%';" | mysql -u root
+echo "GRANT ALL PRIVILEGES ON bibliotheque.* TO  'dawan'@'localhost';" | mysql -u root
