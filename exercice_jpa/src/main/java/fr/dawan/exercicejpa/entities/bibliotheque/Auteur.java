@@ -6,6 +6,7 @@ import java.util.Set;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.NamedQueries;
@@ -56,6 +57,7 @@ public class Auteur extends BaseEntity {
     private LocalDate deces;
     
     @ManyToOne
+    @JoinColumn(name = "nation")
     private Nation nation;
     
     @Setter(value = AccessLevel.NONE)
