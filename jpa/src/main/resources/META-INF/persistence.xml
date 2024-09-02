@@ -13,7 +13,7 @@
 			<!-- Configuration de la datasource -->
 			<property name="jakarta.persistence.jdbc.url"
 				value="jdbc:mariadb://localhost:3306/formationjpa" />
-			<property name="jakarta.persistence.jdbc.user" value="root" />
+			<property name="jakarta.persistence.jdbc.user" value="dawan" />
  			<property name="jakarta.persistence.jdbc.password" value="dawan" />
 			<property name="jakarta.persistence.jdbc.driver"
 				value="org.mariadb.jdbc.Driver" />
