@@ -7,5 +7,5 @@ echo "GRANT ALL PRIVILEGES ON formationjpa.* TO  'dawan'@'localhost';" | mysql -
 echo "CREATE DATABASE requetejpa" | mysql -u root
 echo "GRANT ALL PRIVILEGES ON requetejpa.* TO  'dawan'@'localhost';" | mysql -u root
 
-echo "CREATE DATABASE bibliotheque" | mysql -u root
-echo "GRANT ALL PRIVILEGES ON bibliotheque.* TO  'dawan'@'localhost';" | mysql -u root
+echo "CREATE DATABASE exercice_jpa" | mysql -u root
+echo "GRANT ALL PRIVILEGES ON exercice_jpa.* TO  'dawan'@'localhost';" | mysql -u root
